@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Prestige Worldwide Year 3 Recap – Finished</title>
+<style>
+:root{--ink:#111;--muted:#555;--bg:#0b0d10;--paper:#fff;--accent:#8b0000;--line:#e6e6e6;}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;background:radial-gradient(1200px 700px at 20% 10%,#18212a,var(--bg));color:var(--ink)}
+
+/* "Magazine size": keep the page feeling like US Letter with generous margins */
+.wrap{max-width:980px;margin:0 auto;padding:28px}
+.mag{background:var(--paper);border-radius:18px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+.cover{padding:46px 44px;border-bottom:1px solid var(--line);
+  background:radial-gradient(900px 500px at 90% 20%, rgba(139,0,0,.18), transparent 60%),
+             radial-gradient(800px 500px at 15% 80%, rgba(27,108,168,.16), transparent 60%),
+             linear-gradient(135deg, rgba(139,0,0,.06), rgba(27,108,168,.05));}
+.kicker{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(139,0,0,.10);color:var(--accent);font-weight:900;letter-spacing:.08em;text-transform:uppercase;font-size:12px}
+h1{margin:14px 0 6px;font-size:50px;line-height:1.02;letter-spacing:-.02em}
+.sub{color:var(--muted);font-size:17px;line-height:1.6;max-width:82ch}
+.covergrid{display:grid;grid-template-columns:1.25fr .75fr;gap:26px;margin-top:20px;align-items:center}
+.logo{width:320px;max-width:100%;border-radius:18px;background:#fff;border:1px solid var(--line);padding:10px;box-shadow:0 10px 30px rgba(0,0,0,.10)}
+.coverbullets{margin:0;padding-left:18px;line-height:1.75}
+.coverbullets b{color:var(--accent)}
+.pills{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px}
+.pill{border:1px solid var(--line);padding:6px 10px;border-radius:999px;background:#fff;font-size:12px;color:#444}
+
+.content{padding:38px 44px 54px}
+.section{margin:26px 0 44px}
+.section h2{margin:0 0 12px;font-size:28px;color:var(--accent);letter-spacing:-.01em}
+.section h3{margin:18px 0 6px;font-size:18px;color:#222}
+.lede{font-size:19.5px;line-height:1.8;font-weight:650;color:#222;max-width:86ch;margin:8px 0 16px}
+.text{font-size:17.5px;line-height:1.9;font-weight:600;color:#222;max-width:86ch;margin:10px 0}
+.quote{margin:18px 0;padding:16px 18px;border-left:4px solid var(--accent);background:#f6f6f6;border-radius:14px;font-weight:900;max-width:86ch}
+
+figure{margin:18px 0 0}
+
+/* Magazine image sizing */
+img.photo{
+  width:100%;
+  max-width:100%;
+  height:auto;
+  border-radius:18px;
+  border:1px solid var(--line);
+  background:#fafafa;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+/* Keep extra-tall images from swallowing the page */
+img.photo{max-height: 8.8in; object-fit: cover;}
+
+figcaption{font-size:12px;color:#555;margin-top:6px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px}
+.card{border:1px solid var(--line);border-radius:16px;padding:14px 14px 12px;background:#fff}
+.card h4{margin:0 0 6px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#222}
+.card p{margin:0;color:#333;line-height:1.7;font-size:14px}
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:14px}
+.g{grid-column:span 6}
+
+table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:14px;border:1px solid var(--line);margin-top:12px}
+th,td{padding:10px 12px;text-align:left;font-size:14px;vertical-align:top}
+th{background:#f3f3f3;color:#222;text-transform:uppercase;letter-spacing:.08em;font-size:12px}
+tr+tr td{border-top:1px solid var(--line)}
+
+.cap{border:1px solid var(--line);border-radius:18px;padding:16px 16px 14px;margin-top:14px;background:#fff}
+.caphead{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.caphead h3{margin:0;font-size:18px}
+.owner{color:#666;font-weight:600;font-size:14px}
+.tier{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(139,0,0,.10);color:var(--accent);font-weight:900;font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+.tagline{color:#333;font-weight:850;margin-top:4px}
+.mini{display:flex;gap:10px;flex-wrap:wrap}
+.mini>div{border:1px solid var(--line);border-radius:14px;padding:8px 10px;background:#fbfbfb;font-size:12px;color:#333;min-width:110px}
+.capgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;color:#222;line-height:1.7}
+.capstory{margin-top:10px;padding:10px 12px;border-radius:14px;background:#f6f6f6;border-left:4px solid var(--accent);font-weight:850}
+.pred{border:1px solid var(--line);border-radius:18px;padding:16px;background:#fff;margin-top:14px}
+.pred li{margin:10px 0;line-height:1.7}
+.footer{padding:20px 44px;border-top:1px solid var(--line);font-size:13px;color:#555;background:#fbfbfb}
+
+/* Print-friendly */
+@media print {
+  body{background:#fff}
+  .wrap{padding:0;max-width:none}
+  .mag{border-radius:0;box-shadow:none}
+  .section{page-break-inside:avoid}
+  figure, table, .cap, .pred{page-break-inside:avoid}
+  img.photo{max-height: 9.5in}
+}
+
+@media(max-width:900px){
+  .covergrid{grid-template-columns:1fr}
+  .content,.cover,.footer{padding-left:18px;padding-right:18px}
+  .two{grid-template-columns:1fr}
+  .capgrid{grid-template-columns:1fr}
+  .g{grid-column:span 12}
+}
+</style>
+<style>
+.feature-section { margin: 60px 0; text-align: center; }
+.section-title { font-size: 36px; font-weight: 800; color: #111; margin-bottom: 20px; }
+.feature-text { font-size: 18px; line-height: 1.6; color: #222; max-width: 900px; margin: 20px auto; }
+.feature-image { max-width: 90%; height: auto; border-radius: 12px; margin: 20px 0; }
+</style>
+
+
+<style>
+.team-capsule p { font-size: 14px !important; line-height: 1.4; }
+.team-capsule h3 { font-size: 18px !important; }
+</style>
+
+<style>
+  /* King Lives: blend into magazine (no border box) */
+  #king-lives .card{
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+  }
+  #king-lives img{ border: 0 !important; outline: 0 !important; }
+</style>
+
+
+<style>
+  #king-lives{
+    display: flex;
+    justify-content: center;
+  }
+  #king-lives .card{
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+</style>
+
+
+<style>
+  /* Subtle reduction for Team Breakdown body text only */
+  #team-breakdown p,
+  .team-breakdown p {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+</style>
+
+
+<style>
+  /* Further refine Team Breakdown Strengths & Needs text */
+  #team-breakdown ul li,
+  #team-breakdown .strengths,
+  #team-breakdown .needs,
+  .team-breakdown ul li {
+    font-size: 14px;
+    line-height: 1.35;
+  }
+</style>
+
+</head>
+
+<body><div class="wrap"><article class="mag">
+<header class="cover">
+  <span class="kicker">Dynasty League Magazine</span>
+  <h1>Prestige Worldwide</h1>
+  <p class="sub"><b>Years 1–3 Official Record</b> • Built. Broken. Taken Over.</p>
+  <div class="covergrid">
+    <div>
+      <ul class="coverbullets">
+        <li><b>The Takeover:</b> Josh’s <i>My Nacua</i> posts <b>2001.38</b> PF and takes the Year 3 crown.</li>
+        <li><b>The Inheritance:</b> Dylan pilots <i>Stargazer</i> after taking over a neglected roster with real teeth.</li>
+        <li><b>The Debate:</b> <b>Bijan vs. Gibbs</b> becomes an ideology war.</li>
+        <li><b>The Myth:</b> Cron releases the No. 1 pick and pushes every chip in on <b>Brock Purdy</b>.</li>
+        <li><b>The Blockbuster:</b> Hurts + A.J. Brown ↔ Herbert splits the room.</li>
+      </ul>
+      <div class="pills">
+        <span class="pill">Issue Date: 2025-12-31</span>
+        <span class="pill">10-team Dynasty • PPR • Year 3 Complete</span>
+      </div>
+    </div>
+    <div><img class="logo" src="assets/img_42664c5e717c.jpg" alt="Logo"/></div>
+  </div>
+</header>
+
+<main class="content">
+
+
+
+<section class="section"><h2>The Dynasty Era Begins</h2><p class="lede">By Year 3, Prestige Worldwide stopped pretending it was “just a league.” It became a living archive: draft-night bravado, waiver-wire desperation, and trades that age like milk—but somehow still get defended in the chat. Dynasty formats don’t just crown champions; they preserve receipts.</p><p class="quote">“Every move carries weight. Every mistake survives.”</p></section>
+<section class="section"><h2>Year 1 (2023): Raw Power</h2><p class="text">The inaugural season was pure startup energy: big scores, big opinions, and even bigger waiver wallets. KBo610 led the league in points (2017.48 PF 😂) like a human spreadsheet, but the first trophy went to Grubey’s Velociraptors—proof that timing and survival still beat raw math when the playoffs arrive.</p></section>
+<section class="section"><h2>Year 2 (2024): Consolidation</h2><p class="text">Year 2 brought consolidation. The league started behaving like a dynasty league: future value debates, long-term builds, and a growing understanding that one bad QB room can ruin your season and your group chat. Browne’s Randy Jackson’s Sword took the crown, KBo stayed near the top, and the middle class of the league started learning the hardest lesson: ‘good’ is the most dangerous place to live.</p></section>
+<section class="section"><h2>Year 3 (2025): The Takeover</h2><p class="text">Year 3 was the takeover. Josh’s My Nacua went 11–3 with 2001.38 points for and the lowest points against in the league. That’s not luck—that’s gravitational dominance. Stargazer, now under Dylan after taking over a neglected but loaded roster, immediately looked like a franchise that had been waiting for an adult to take the keys. Brayden’s takeover era continued, trying to turn rubble into a roadmap.</p></section>
+<section class="section">
+  <h2>Feature: My Nacua — The Takeover</h2>
+  <p class="text">The league tried to reduce the story to a single name: Puka Nacua. Drew’s running bit—‘Puka is carrying you’—landed because it’s funny, but also because it’s the kind of truth dynasty leagues argue about at 1:00 a.m. Still: dynasties aren’t built on one player. They’re built on weekly lineup discipline, depth, and the ability to avoid the self-inflicted wounds that sink contenders.</p>
+  <figure><img class="photo" src="assets/img_5384d25bdbef.jpg" alt="Puka"/><figcaption>Puka Nacua: weekly scoreboard graffiti.</figcaption></figure>
+  <h3>QB Future Watch: Drake Maye &amp; the Stafford Shadow</h3>
+  <div class="two">
+    <div class="card"><h4>The Bet</h4><p>Maye is the kind of QB you keep forever… or regret trading by Halloween.</p></div>
+    <div class="card"><h4>The Cloud</h4><p>Stafford rumors reshape the entire Puka timeline. Dynasty never forgets.</p></div>
+  </div>
+  <p class="text">Drake Maye might define the future of My Nacua if he can sustain elite play. Meanwhile, Matthew Stafford’s retirement whispers hang over the entire Puka economy. If Stafford rides into the sunset, does Puka stay a top-tier asset—or does the league start pricing in uncertainty? Dynasty is ruthless: your WR1’s value can be held hostage by a quarterback’s calendar.</p>
+  <figure><img class="photo" src="assets/img_dc235f595b7f.jpg" alt="Maye"/><figcaption>Drake Maye: franchise energy with dynasty consequences.</figcaption></figure>
+</section>
+<section class="section">
+  <h2>The Great RB Civil War
+<section class="feature-section">
+  <h2>
+</h2>
+  <p class="text">No debate owned the league like Jahmyr Gibbs vs. Bijan Robinson. It wasn’t just ‘who’s better’—it was a referendum on roster philosophy. Do you chase weekly ceiling? Long-term stability? Volume? Efficiency? In the background, icons like Christian McCaffrey and Jonathan Taylor reminded everyone that running back greatness is both explosive and fragile. And when stars like Saquon Barkley fall off, the league learns (again) that dynasty timelines don’t care about your feelings.</p>
+  <div class="gallery">
+    <div class="g"><img class="photo" src="assets/img_280eb454297d.jpg" alt="Bijan"/></div>
+    <div class="g"><img class="photo" src="assets/img_dd3ee8f8c118.jpg" alt="Gibbs"/></div>
+  </div>
+  <div class="gallery" style="margin-top:16px">
+    <div class="g"><img class="photo" src="assets/img_321f4f20c8c3.jpg" alt="JT"/></div>
+    <div class="g"><img class="photo" src="assets/img_16aa416c0856.jpg" alt="Saquon"/>
+<section id="king-lives" class="page">
+  <div class="card">
+    <h2 style="font-size:34px;font-weight:900;letter-spacing:.5px;margin:0 0 10px 0;">The King Lives</h2>
+    <p style="font-size:18px;font-weight:700;margin:0 0 14px 0;">
+      Derrick Henry, entering his <b>10th NFL season (2025)</b>, erased the idea of an RB expiration date.
+    </p>
+    <img src="assets/img_5b0bc46798a3.jpg" alt="Derrick Henry milestone season" style="width:100%;height:auto;max-height:420px;object-fit:contain;border-radius:18px;box-shadow:0 12px 30px rgba(0,0,0,.35);" />
+    <p style="margin:14px 0 0 0;font-size:17px;font-weight:650;line-height:1.35;">
+      Age? Mileage? Baltimore didn’t get the memo. Henry dominated for the Ravens in 2024, pushing <b>nearly 2,000 rushing yards</b>
+      while staying efficient, violent, and unfairly fast for his size.
+      As he closes in on <b>top-10 all-time rushing milestones</b>, the tape looks the same: downhill power, breakaway speed,
+      and the kind of work ethic that turns “decline” into a rumor.
+    </p>
+    <p style="margin:10px 0 0 0;font-size:17px;font-weight:650;line-height:1.35;">
+      The legend isn’t fading — it’s leveling up. <b>The King lives.</b>
+    </p>
+  </div>
+</section>
+</div>
+  </div>
+</section>
+<section class="section">
+  <h2>Stars, Fall-offs, and the Vibe Shift</h2>
+  <p class="text">The league’s broader NFL anxieties bled into dynasty anxiety: Patrick Mahomes’ injury uncertainty, questions about Joe Burrow and Ja’Marr Chase staying aligned in Cincinnati, and what becomes of Justin Jefferson without elite quarterback play. Lamar Jackson looks to return to MVP form after an injury-plagued year on a maligned team. Every one of these storylines is a dynasty multiplier—either you’re early and look smart, or you’re late and get outbid.</p>
+  <div class="gallery" style="margin-top:16px">
+    <div class="g"><img class="photo" src="assets/img_7c2d9fcebc93.jpg" alt="Patrick Mahomes"/></div>
+    <div class="g"><img class="photo" src="assets/img_b6c21dc81db8.jpg" alt="Lamar Jackson"/></div>
+  </div>
+  <div class="gallery" style="margin-top:16px">
+    <div class="g"><img class="photo" src="assets/img_323a367b31b7.jpg" alt="Justin Jefferson"/></div>
+    <div class="g"><img class="photo" src="assets/img_39a2be7c4483.jpg" alt="Burrow and Chase"/></div>
+  </div>
+</section>
+<section class="section"><h2>Blockbuster Trades</h2><p class="text">The blockbuster trade that split the room: Drew and Grubey swapping Jalen Hurts + A.J. Brown for Justin Herbert. It’s the cleanest kind of dynasty argument—stack ceiling versus single-asset stability. You can justify it either way, which is exactly why it will get re-litigated for years. Then there was Jameson Williams for Keenan Allen: a move that exposed the league’s core divide—win-now certainty vs. win-later faith.</p>
+<figure><img class="photo" src="assets/img_aac4a16eaf52.jpg" alt="Herbert"/><figcaption>Herbert: centerpiece of a trade that will be quoted forever.</figcaption></figure>
+</section>
+
+<section id="cron-saga" class="page">
+  <div class="card">
+    <h2 style="font-size:34px;font-weight:900;letter-spacing:.5px;margin:0 0 10px 0;">Cron’s “All-In on Mr. Irrelevant” Saga</h2>
+    <p style="font-size:18px;font-weight:700;margin:0 0 14px 0;">
+      In a dynasty league, Cron did the unthinkable: he let the No. 1 pick Caleb Williams touch waivers — then pushed every chip to the center on Brock Purdy…
+      the literal last pick of the NFL Draft. Genius, madness, or the start of a 30-for-30. Probably all three.
+    </p>
+    <img src="assets/img_e287a2cfb709.jpg" alt="Caleb Williams vs Brock Purdy" style="width:100%;height:auto;max-height:420px;object-fit:contain;border-radius:18px;box-shadow:0 12px 30px rgba(0,0,0,.35);" />
+    <p style="margin:8px 0 0 0;font-size:14px;opacity:.9;"><b>NO. 1 PICK vs LAST PICK</b> — the receipts will outlive us all.</p>
+  </div>
+</section>
+
+
+<section class="section">
+  <h2>Power Rankings: Entering Year 4</h2>
+  <p class="text">A completely serious ranking based on Year 3 results, scoring profile, and dynasty vibes.</p>
+  <table><thead><tr><th>Rank</th><th>Team</th><th>Owner</th><th>2025 Rec</th><th>PF</th><th>Tier</th><th>Why</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td><b>My Nacua</b></td><td>Josh</td><td>11-3</td><td>2001.38</td><td>S</td><td>The champ with receipts.</td></tr><tr><td>2</td><td><b>Stargazer</b></td><td>Dylan</td><td>10-4</td><td>1976.88</td><td>A</td><td>Inherited superteam, now weaponized.</td></tr><tr><td>3</td><td><b>Cron Squad</b></td><td>Cron</td><td>10-4</td><td>1870.56</td><td>A-</td><td>Contender… with one legendary myth.</td></tr><tr><td>4</td><td><b>Dgeiger1982</b></td><td>Drew</td><td>7-7</td><td>1974.32</td><td>B+</td><td>Points for days, wins… sometimes.</td></tr><tr><td>5</td><td><b>kbo610</b></td><td>KBo</td><td>7-7</td><td>1612.68</td><td>B</td><td>The spreadsheet still breathes.</td></tr><tr><td>6</td><td><b>The Replacements</b></td><td>Hen</td><td>8-6</td><td>1579.18</td><td>C+</td><td>Sneaky record, messy math.</td></tr><tr><td>7</td><td><b>Randy Jackson's Sword</b></td><td>Browne (Commish)</td><td>6-8</td><td>1588.80</td><td>B-</td><td>Former champ, current menace.</td></tr><tr><td>8</td><td><b>brayjwills28</b></td><td>Brayden</td><td>5-9</td><td>1480.34</td><td>C</td><td>Rebuild with a pulse.</td></tr><tr><td>9</td><td><b>The Velociraptors</b></td><td>Grubey</td><td>3-11</td><td>1453.56</td><td>D</td><td>Inaugural champ, now a rebuild headline.</td></tr><tr><td>10</td><td><b>CharlieBrowne</b></td><td>Charlie</td><td>3-11</td><td>1586.40</td><td>D+</td><td>Variance victim.</td></tr>
+  </tbody></table>
+</section>
+<section class="section">
+  <h2>Team Breakdown</h2>
+  <p class="text">A dossier on every franchise: what it is, what it needs, and what it’s pretending not to be.</p>
+  
+    <div class="cap">
+      <div class="caphead">
+        <div>
+          <div class="tier">Tier S</div>
+          <h3>My Nacua <span class="owner">(Josh)</span></h3>
+          <div class="tagline">The champ with receipts.</div>
+        </div>
+        <div class="mini">
+          <div><b>2025 Finish</b><br/>1</div>
+          <div><b>Record</b><br/>11-3</div>
+          <div><b>PF / PA</b><br/>2001.38 / 1637.68</div>
+        </div>
+      </div>
+      <div class="capgrid">
+        <div><b>Strengths</b><br/>Elite scoring + low-PA luck; Puka as a weekly headline; Maye as the future.</div>
+        <div><b>Needs</b><br/>QB contingency if Stafford retires; keep depth so Puka isn’t the whole plot.</div>
+      </div>
+      <div class="capstory">The ‘Puka carries you’ bit hit—Josh still carried the trophy.</div>
+    </div>
+    
+    <div class="cap">
+      <div class="caphead">
+        <div>
+          <div class="tier">Tier A</div>
+          <h3>Stargazer <span class="owner">(Dylan)</span></h3>
+          <div class="tagline">Inherited superteam, now weaponized.</div>
+        </div>
+        <div class="mini">
+          <div><b>2025 Finish</b><br/>2</div>
+          <div><b>Record</b><br/>10-4</div>
+          <div><b>PF / PA</b><br/>1976.88 / 1723.12</div>
+        </div>
+      </div>
+      <div class="capgrid">
+        <div><b>Strengths</b><br/>Top-tier points; new owner energy; contender infrastructure already built.</div>
+        <div><b>Needs</b><br/>Avoid all-in whiplash; stabilize RB depth so the floor stays high.</div>
+      </div>
+      <div class="capstory">Dylan took over a neglected Ferrari and immediately drove it like he built the engine.</div>
+    </div>
+    
+    <div class="cap">
+      <div class="caphead">
+        <div>
+          <div class="tier">Tier A-</div>
+          <h3>Cron Squad <span class="owner">(Cron)</span></h3>
+          <div class="tagline">Contender… with one legendary myth.</div>
+        </div>
+        <div class="mini">
+          <div><b>2025 Finish</b><br/>3</div>
+          <div><b>Record</b><br/>10-4</div>
+          <div><b>PF / PA</b><br/>1870.56 / 1711.16</div>
+        </div>
+      </div>
+      <div class="capgrid">
+        <div><b>Strengths</b><br/>10–4 profile; always in the mix; ceiling if the QB bet hits.</div>
+        <div><b>Needs</b><br/>Live with the Purdy thesis; build insulation if variance swings.</div>
+      </div>
+      <div class="capstory">Released the No. 1 pick and pushed every chip in on Mr. Irrelevant.</div>
+    </div>
+    
+    <div class="cap">
+      <div class="caphead">
+        <div>
+          <div class="tier">Tier B+</div>
+          <h3>Dgeiger1982 <span class="owner">(Drew)</span></h3>
+          <div class="tagline">Points for days, wins… sometimes.</div>
+        </div>
+        <div class="mini">
+          <div><b>2025 Finish</b><br/>5</div>
+          <div><b>Record</b><br/>7-7</div>
+          <div><b>PF / PA</b><br/>1974.32 / 1812.60</div>
+        </div>
+      </div>
+      <div class="capgrid">
+        <div><b>Strengths</b><br/>Nearly 2,000 PF at .500 is objectively hilarious; ceiling weeks can beat anyone.</div>
+        <div><b>Needs</b><br/>Consistency; injury-proofing; one more hammer to convert PF into playoff leverage.</div>
+      </div>
+      <div class="capstory">The league’s ‘should be better than your record’ exhibit A.</div>
+    </div>
+    
+    <div class="cap">
+      <div class="caphead">
+        <div>
+          <div class="tier">Tier B</div>
+          <h3>kbo610 <span class="owner">(KBo)</span></h3>
+          <div class="tagline">The spreadsheet still breathes.</div>
+        </div>
+        <div class="mini">
+          <div><b>2025 Finish</b><br/>6</div>
+          <div><b>Record</b><br/>7-7</div>
+          <div><b>PF / PA</b><br/>1612.68 / 1590.94</div>
+        </div>
+      </div>
+      <div class="capgrid">
+        <div><b>Strengths</b><br/>History of dominance; knows how to build; can spike weeks.</div>
+        <div><b>Needs</b><br/>Pick a lane—reload or retool; inject youth at premium positions.</div>
+      </div>
+      <div class="capstory">When KBo gets hot, the chat gets quiet.</div>
+    </div>
+    
+    <div class="cap">
+      <div class="caphead">
+        <div>
+          <div class="tier">Tier C+</div>
+          <h3>The Replacements <span class="owner">(Hen)</span></h3>
+          <div class="tagline">Sneaky record, messy math.</div>
+        </div>
+        <div class="mini">
+          <div><b>2025 Finish</b><br/>4</div>
+          <div><b>Record</b><br/>8-6</div>
+          <div><b>PF / PA</b><br/>1579.18 / 1683.54</div>
+        </div>
+      </div>
+      <div class="capgrid">
+        <div><b>Strengths</b><br/>8–6 is respectable; can win ugly.</div>
+        <div><b>Needs</b><br/>More firepower; better weekly ceiling; a star that changes matchups.</div>
+      </div>
+      <div class="capstory">The league’s ‘I’m not dead yet’ team.</div>
+    </div>
+    
+    <div class="cap">
+      <div class="caphead">
+        <div>
+          <div class="tier">Tier B-</div>
+          <h3>Randy Jackson's Sword <span class="owner">(Browne (Commish))</span></h3>
+          <div class="tagline">Former champ, current menace.</div>
+        </div>
+        <div class="mini">
+          <div><b>2025 Finish</b><br/>7</div>
+          <div><b>Record</b><br/>6-8</div>
+          <div><b>PF / PA</b><br/>1588.80 / 1620.98</div>
+        </div>
+      </div>
+      <div class="capgrid">
+        <div><b>Strengths</b><br/>Champ DNA; commish confidence; still annoyingly hard to kill.</div>
+        <div><b>Needs</b><br/>More weekly ceiling; youth infusion to avoid the slow fade.</div>
+      </div>
+      <div class="capstory">Won Year 2, then spent Year 3 acting like defending the title was optional.</div>
+    </div>
+    
+    <div class="cap">
+      <div class="caphead">
+        <div>
+          <div class="tier">Tier C</div>
+          <h3>brayjwills28 <span class="owner">(Brayden)</span></h3>
+          <div class="tagline">Rebuild with a pulse.</div>
+        </div>
+        <div class="mini">
+          <div><b>2025 Finish</b><br/>8</div>
+          <div><b>Record</b><br/>5-9</div>
+          <div><b>PF / PA</b><br/>1480.34 / 1818.56</div>
+        </div>
+      </div>
+      <div class="capgrid">
+        <div><b>Strengths</b><br/>Takeover arc; assets can be consolidated; nothing to lose.</div>
+        <div><b>Needs</b><br/>Find cornerstones; add QB/WR stability; stop bleeding PA.</div>
+      </div>
+      <div class="capstory">Brayden took over a mess and at least made it a strategy mess.</div>
+    </div>
+    
+    <div class="cap">
+      <div class="caphead">
+        <div>
+          <div class="tier">Tier D</div>
+          <h3>The Velociraptors <span class="owner">(Grubey)</span></h3>
+          <div class="tagline">Inaugural champ, now a rebuild headline.</div>
+        </div>
+        <div class="mini">
+          <div><b>2025 Finish</b><br/>10</div>
+          <div><b>Record</b><br/>3-11</div>
+          <div><b>PF / PA</b><br/>1453.56 / 1719.56</div>
+        </div>
+      </div>
+      <div class="capgrid">
+        <div><b>Strengths</b><br/>Proved the trophy is possible; path exists with smart consolidation.</div>
+        <div><b>Needs</b><br/>Modernize the core; secure long-term QB/WR anchors.</div>
+      </div>
+      <div class="capstory">Year 1 champ energy… currently stored in a museum.</div>
+    </div>
+    
+    <div class="cap">
+      <div class="caphead">
+        <div>
+          <div class="tier">Tier D+</div>
+          <h3>CharlieBrowne <span class="owner">(Charlie)</span></h3>
+          <div class="tagline">Variance victim.</div>
+        </div>
+        <div class="mini">
+          <div><b>2025 Finish</b><br/>9</div>
+          <div><b>Record</b><br/>3-11</div>
+          <div><b>PF / PA</b><br/>1586.40 / 1805.96</div>
+        </div>
+      </div>
+      <div class="capgrid">
+        <div><b>Strengths</b><br/>PF isn’t awful for 3–11; some pieces clearly play.</div>
+        <div><b>Needs</b><br/>Reduce volatility: QB floor, RB depth, a weekly WR1.</div>
+      </div>
+      <div class="capstory">Standings say 3–11; PF says ‘how did that happen?’</div>
+    </div>
+    
+</section>
+<section id="awards" class="page">
+  <div class="card">
+    <h2 style="font-size:34px;font-weight:900;letter-spacing:.5px;margin:0 0 10px 0;">End-of-Year Awards (Stat-Based)</h2>
+    <p style="font-size:18px;font-weight:700;margin:0 0 14px 0;">Fantasy-only production (Weeks 1–17) + league results. Receipts over vibes.</p>
+    <table class="table" style="font-size:18px;font-weight:700;">
+      <thead>
+        <tr><th>Award</th><th>Winner</th><th>Stat/Narrative Hook</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Fantasy MVP (Overall)</td><td>Christian McCaffrey</td><td>Top overall fantasy producer (Weeks 1–17).</td></tr>
+        <tr><td>QB1 Crown</td><td>Josh Allen</td><td>Elite weekly floor + nuclear ceiling.</td></tr>
+        <tr><td>WR1 Crown</td><td>Puka Nacua</td><td>Volume + explosiveness = weekly cheat code.</td></tr>
+        <tr><td>RB1 (Non-CMC) Hammer</td><td>Bijan Robinson</td><td>The center of the Bijan vs. Gibbs civil war.</td></tr>
+        <tr><td>TE1 Throne</td><td>Trey McBride</td><td>Turned a chaotic position into a weekly advantage.</td></tr>
+        <tr><td>Rookie of the Year (2025 class)</td><td>Ashton Jeanty</td><td>Rookie leaderboard RB1 (rookies-only ranks) — instant-impact profile.</td></tr>
+        <tr><td>Clutch Team of the Year</td><td>Josh — My Nacua</td><td>11–3, league-best PF, and the title.</td></tr>
+        <tr><td>Heartbreak Award</td><td>Cron — Cron Squad</td><td>Built a wagon… then watched the trophy drive away.</td></tr>
+      </tbody>
+    </table>
+
+    <div style="margin-top:18px;">
+      
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+        <img src="assets/img_b4328f85606f.jpg" alt="CMC" style="width:100%;height:160px;object-fit:cover;border-radius:14px;box-shadow:0 10px 22px rgba(0,0,0,.28);" />
+        <img src="assets/img_38585bfd5dc0.jpg" alt="Josh Allen" style="width:100%;height:160px;object-fit:cover;border-radius:14px;box-shadow:0 10px 22px rgba(0,0,0,.28);" />
+        <img src="assets/img_d02152094604.jpg" alt="Puka Nacua" style="width:100%;height:160px;object-fit:cover;border-radius:14px;box-shadow:0 10px 22px rgba(0,0,0,.28);" />
+        <img src="assets/img_e38ba3e3ef75.jpg" alt="Bijan Robinson" style="width:100%;height:160px;object-fit:cover;border-radius:14px;box-shadow:0 10px 22px rgba(0,0,0,.28);" />
+        <img src="assets/img_46dc18c82271.jpg" alt="Trey McBride" style="width:100%;height:160px;object-fit:cover;border-radius:14px;box-shadow:0 10px 22px rgba(0,0,0,.28);" />
+        <img src="assets/img_9ae78d5ebc68.jpg" alt="Jaxon Smith-Njigba" style="width:100%;height:160px;object-fit:cover;border-radius:14px;box-shadow:0 10px 22px rgba(0,0,0,.28);" />
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section"><h2>Draft Outlook &amp; Roster Needs</h2><p class="text"><b>My Nacua (Josh):</b> Protect the Puka timeline; plan for Stafford volatility; keep QB depth behind Maye.<br/><b>Stargazer (Dylan):</b> Turn inherited strength into sustainable depth; avoid ‘all-in whiplash’; keep RB insulation.<br/><b>Cron Squad (Cron):</b> Live with the Purdy thesis; add insulation around the bet; maximize weekly ceiling.<br/><b>Dgeiger1982 (Drew):</b> Chase WR ceiling; manage injury exposure; decide whether you’re contending or reloading.<br/><b>Everyone else:</b> Pick a lane—rebuild with purpose or contend without excuses.</p></section>
+<section id="draftoutlook" class="page">
+  <div class="card">
+    <h2 style="font-size:34px;font-weight:900;letter-spacing:.5px;margin:0 0 10px 0;">2026 Rookie Draft Outlook (Year 4 Big Board)</h2>
+    <p style="font-size:18px;font-weight:700;margin:0 0 14px 0;">
+      Early projection board (late-season update). Landing spots will reorder everything, but this is the watchlist for Year 4.
+    </p>
+    <table class="table" style="font-size:18px;font-weight:700;">
+      <thead>
+        <tr><th style="width:70px;">Rank</th><th>Player</th><th>School</th><th>Ht</th><th>Wt</th></tr>
+      </thead>
+      <tbody>
+        <tr><td style='width:70px;'><b>1</b></td><td><b>Jeremiyah Love</b> <span style='opacity:.9'>(RB)</span></td><td>Notre Dame</td><td>6'0"</td><td>214 lbs</td></tr>
+<tr><td style='width:70px;'><b>2</b></td><td><b>Jordyn Tyson</b> <span style='opacity:.9'>(WR)</span></td><td>Arizona State</td><td>6'2"</td><td>200 lbs</td></tr>
+<tr><td style='width:70px;'><b>3</b></td><td><b>Carnell Tate</b> <span style='opacity:.9'>(WR)</span></td><td>Ohio State</td><td>6'3"</td><td>191 lbs</td></tr>
+<tr><td style='width:70px;'><b>4</b></td><td><b>Justice Haynes</b> <span style='opacity:.9'>(RB)</span></td><td>Michigan</td><td>5'11"</td><td>210 lbs</td></tr>
+<tr><td style='width:70px;'><b>5</b></td><td><b>Makai Lemon</b> <span style='opacity:.9'>(WR)</span></td><td>USC</td><td>5'11"</td><td>195 lbs</td></tr>
+<tr><td style='width:70px;'><b>6</b></td><td><b>Denzel Boston</b> <span style='opacity:.9'>(WR)</span></td><td>Washington</td><td>6'4"</td><td>209 lbs</td></tr>
+<tr><td style='width:70px;'><b>7</b></td><td><b>KC Concepcion</b> <span style='opacity:.9'>(WR)</span></td><td>Texas A&M</td><td>5'11"</td><td>190 lbs</td></tr>
+<tr><td style='width:70px;'><b>8</b></td><td><b>Chris Brazzell II</b> <span style='opacity:.9'>(WR)</span></td><td>Tennessee</td><td>6'5"</td><td>200 lbs</td></tr>
+<tr><td style='width:70px;'><b>9</b></td><td><b>Kaytron Allen</b> <span style='opacity:.9'>(RB)</span></td><td>Penn State</td><td>5'11"</td><td>217 lbs</td></tr>
+<tr><td style='width:70px;'><b>10</b></td><td><b>Eli Stowers</b> <span style='opacity:.9'>(TE)</span></td><td>Vanderbilt</td><td>6'4"</td><td>235 lbs</td></tr>
+<tr><td style='width:70px;'><b>11</b></td><td><b>Jonah Coleman</b> <span style='opacity:.9'>(RB)</span></td><td>Washington</td><td>5'9"</td><td>228 lbs</td></tr>
+<tr><td style='width:70px;'><b>12</b></td><td><b>Kenyon Sadiq</b> <span style='opacity:.9'>(TE)</span></td><td>Oregon</td><td>6'3"</td><td>245 lbs</td></tr>
+<tr><td style='width:70px;'><b>13</b></td><td><b>Demond Claiborne</b> <span style='opacity:.9'>(RB)</span></td><td>Wake Forest</td><td>5'10"</td><td>195 lbs</td></tr>
+<tr><td style='width:70px;'><b>14</b></td><td><b>Chris Bell</b> <span style='opacity:.9'>(WR)</span></td><td>Louisville</td><td>6'2"</td><td>220 lbs</td></tr>
+<tr><td style='width:70px;'><b>15</b></td><td><b>Fernando Mendoza</b> <span style='opacity:.9'>(QB)</span></td><td>Indiana</td><td>6'5"</td><td>225 lbs</td></tr>
+<tr><td style='width:70px;'><b>16</b></td><td><b>Emmett Johnson</b> <span style='opacity:.9'>(RB)</span></td><td>Nebraska</td><td>5'11"</td><td>200 lbs</td></tr>
+<tr><td style='width:70px;'><b>17</b></td><td><b>Ja'Kobi Lane</b> <span style='opacity:.9'>(WR)</span></td><td>USC</td><td>6'4"</td><td>200 lbs</td></tr>
+<tr><td style='width:70px;'><b>18</b></td><td><b>Dante Moore</b> <span style='opacity:.9'>(QB)</span></td><td>Oregon</td><td>6'3"</td><td>206 lbs</td></tr>
+<tr><td style='width:70px;'><b>19</b></td><td><b>Nicholas Singleton</b> <span style='opacity:.9'>(RB)</span></td><td>Penn State</td><td>6'0"</td><td>224 lbs</td></tr>
+<tr><td style='width:70px;'><b>20</b></td><td><b>Jadarian Price</b> <span style='opacity:.9'>(RB)</span></td><td>Notre Dame</td><td>5'11"</td><td>209 lbs</td></tr>
+<tr><td style='width:70px;'><b>21</b></td><td><b>Duce Robinson</b> <span style='opacity:.9'>(WR/TE)</span></td><td>Florida State</td><td>6'6"</td><td>222 lbs</td></tr>
+<tr><td style='width:70px;'><b>22</b></td><td><b>Malachi Fields</b> <span style='opacity:.9'>(WR)</span></td><td>Notre Dame</td><td>6'4"</td><td>223 lbs</td></tr>
+<tr><td style='width:70px;'><b>23</b></td><td><b>Michael Trigg</b> <span style='opacity:.9'>(TE)</span></td><td>Baylor</td><td>6'4"</td><td>240 lbs</td></tr>
+<tr><td style='width:70px;'><b>24</b></td><td><b>Hollywood Smothers</b> <span style='opacity:.9'>(RB)</span></td><td>NC State</td><td>5'11"</td><td>195 lbs</td></tr>
+<tr><td style='width:70px;'><b>25</b></td><td><b>Nyck Harbor</b> <span style='opacity:.9'>(WR)</span></td><td>South Carolina</td><td>6'5"</td><td>235 lbs</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:14px;font-size:16px;font-weight:650;opacity:.95;">
+      <b>Draft strategy note:</b> In a 10-team dynasty, elite RB/WR tiers disappear fast. If you’re a contender, buy picks early; if you’re rebuilding, hoard seconds and let the board come to you.
+    </p>
+  </div>
+</section>
+<section class="section"><h2>Final Word</h2><p class="quote">Prestige Worldwide is now in its permanent dynasty phase. The receipts are archived, the rivalries are loud, and Year 4 is already talking trash. The only question is whether you’re building a future—or paying for your past.</p></section>
+
+
+
+</main>
+
+<footer class="footer">Single-file HTML with embedded images. Print → Save as PDF for a shareable magazine.</footer>
+</article></div></body></html>
